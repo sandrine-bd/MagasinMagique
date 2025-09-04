@@ -39,16 +39,17 @@ public class MagasinGoldenMasterTest {
             snapshot.append("\n");
 
             magasin.updateQuality();
+        }
 
-            // Vérifie si le fichier existe déjà
-            if (Files.exists(SNAPSHOT_FILE)) {
-                String expected = Files.readString(SNAPSHOT_FILE);
-                assertEquals(expected, snapshot.toString(), "Golden Master mismatch!");
-            } else {
-                // Crée le snapshop initial
-                Files.writeString(SNAPSHOT_FILE, snapshot.toString());
-                System.out.println("Snapshot initial créé : " + SNAPSHOT_FILE.toAbsolutePath());
-            }
+        // Vérifie si le fichier existe déjà
+        if (Files.exists(SNAPSHOT_FILE)) {
+            String expected = Files.readString(SNAPSHOT_FILE);
+            assertEquals(expected, snapshot.toString(), "Golden Master mismatch!");
+        } else {
+            // Crée le snapshop initial
+            Files.writeString(SNAPSHOT_FILE, snapshot.toString());
+            System.out.println("Snapshot initial créé : " + SNAPSHOT_FILE.toAbsolutePath());
         }
     }
 }
+

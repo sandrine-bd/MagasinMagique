@@ -1,0 +1,210 @@
+Jour 0:
+Produit normal, 10, 20
+Produit normal, 0, 7
+Produit normal, 5, 5
+Comté, 2, 0
+Comté, 0, 49
+Kryptonite, 0, 80
+Pass VIP Concert, 15, 20
+Pass VIP Concert, 10, 30
+Pass VIP Concert, 5, 35
+Pass VIP Concert, 0, 40
+Pouvoir magique, 10, 20
+Pouvoir magique, 0, 10
+
+Jour 1:
+Produit normal, 9, 19
+Produit normal, -1, 5
+Produit normal, 4, 4
+Comté, 1, 1
+Comté, -1, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 14, 21
+Pass VIP Concert, 9, 32
+Pass VIP Concert, 4, 38
+Pass VIP Concert, -1, 0
+Pouvoir magique, 9, 18
+Pouvoir magique, -1, 6
+
+Jour 2:
+Produit normal, 8, 18
+Produit normal, -2, 3
+Produit normal, 3, 3
+Comté, 0, 2
+Comté, -2, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 13, 22
+Pass VIP Concert, 8, 34
+Pass VIP Concert, 3, 41
+Pass VIP Concert, -2, 0
+Pouvoir magique, 8, 16
+Pouvoir magique, -2, 2
+
+Jour 3:
+Produit normal, 7, 17
+Produit normal, -3, 1
+Produit normal, 2, 2
+Comté, -1, 4
+Comté, -3, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 12, 23
+Pass VIP Concert, 7, 36
+Pass VIP Concert, 2, 44
+Pass VIP Concert, -3, 0
+Pouvoir magique, 7, 14
+Pouvoir magique, -3, 0
+
+Jour 4:
+Produit normal, 6, 16
+Produit normal, -4, 0
+Produit normal, 1, 1
+Comté, -2, 6
+Comté, -4, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 11, 24
+Pass VIP Concert, 6, 38
+Pass VIP Concert, 1, 47
+Pass VIP Concert, -4, 0
+Pouvoir magique, 6, 12
+Pouvoir magique, -4, 0
+
+Jour 5:
+Produit normal, 5, 15
+Produit normal, -5, 0
+Produit normal, 0, 0
+Comté, -3, 8
+Comté, -5, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 10, 25
+Pass VIP Concert, 5, 40
+Pass VIP Concert, 0, 50
+Pass VIP Concert, -5, 0
+Pouvoir magique, 5, 10
+Pouvoir magique, -5, 0
+
+Jour 6:
+Produit normal, 4, 14
+Produit normal, -6, 0
+Produit normal, -1, 0
+Comté, -4, 10
+Comté, -6, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 9, 27
+Pass VIP Concert, 4, 43
+Pass VIP Concert, -1, 0
+Pass VIP Concert, -6, 0
+Pouvoir magique, 4, 8
+Pouvoir magique, -6, 0
+
+Jour 7:
+Produit normal, 3, 13
+Produit normal, -7, 0
+Produit normal, -2, 0
+Comté, -5, 12
+Comté, -7, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 8, 29
+Pass VIP Concert, 3, 46
+Pass VIP Concert, -2, 0
+Pass VIP Concert, -7, 0
+Pouvoir magique, 3, 6
+Pouvoir magique, -7, 0
+
+Jour 8:
+Produit normal, 2, 12
+Produit normal, -8, 0
+Produit normal, -3, 0
+Comté, -6, 14
+Comté, -8, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 7, 31
+Pass VIP Concert, 2, 49
+Pass VIP Concert, -3, 0
+Pass VIP Concert, -8, 0
+Pouvoir magique, 2, 4
+Pouvoir magique, -8, 0
+
+Jour 9:
+Produit normal, 1, 11
+Produit normal, -9, 0
+Produit normal, -4, 0
+Comté, -7, 16
+Comté, -9, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 6, 33
+Pass VIP Concert, 1, 50
+Pass VIP Concert, -4, 0
+Pass VIP Concert, -9, 0
+Pouvoir magique, 1, 2
+Pouvoir magique, -9, 0
+
+Jour 10:
+Produit normal, 0, 10
+Produit normal, -10, 0
+Produit normal, -5, 0
+Comté, -8, 18
+Comté, -10, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 5, 35
+Pass VIP Concert, 0, 50
+Pass VIP Concert, -5, 0
+Pass VIP Concert, -10, 0
+Pouvoir magique, 0, 0
+Pouvoir magique, -10, 0
+
+Jour 11:
+Produit normal, -1, 8
+Produit normal, -11, 0
+Produit normal, -6, 0
+Comté, -9, 20
+Comté, -11, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 4, 38
+Pass VIP Concert, -1, 0
+Pass VIP Concert, -6, 0
+Pass VIP Concert, -11, 0
+Pouvoir magique, -1, 0
+Pouvoir magique, -11, 0
+
+Jour 12:
+Produit normal, -2, 6
+Produit normal, -12, 0
+Produit normal, -7, 0
+Comté, -10, 22
+Comté, -12, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 3, 41
+Pass VIP Concert, -2, 0
+Pass VIP Concert, -7, 0
+Pass VIP Concert, -12, 0
+Pouvoir magique, -2, 0
+Pouvoir magique, -12, 0
+
+Jour 13:
+Produit normal, -3, 4
+Produit normal, -13, 0
+Produit normal, -8, 0
+Comté, -11, 24
+Comté, -13, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 2, 44
+Pass VIP Concert, -3, 0
+Pass VIP Concert, -8, 0
+Pass VIP Concert, -13, 0
+Pouvoir magique, -3, 0
+Pouvoir magique, -13, 0
+
+Jour 14:
+Produit normal, -4, 2
+Produit normal, -14, 0
+Produit normal, -9, 0
+Comté, -12, 26
+Comté, -14, 50
+Kryptonite, 0, 80
+Pass VIP Concert, 1, 47
+Pass VIP Concert, -4, 0
+Pass VIP Concert, -9, 0
+Pass VIP Concert, -14, 0
+Pouvoir magique, -4, 0
+Pouvoir magique, -14, 0
+
