@@ -129,34 +129,4 @@ class MagasinTest {
         assertEquals(-1, produit.sellIn);
         assertEquals(6, produit.quality); // -4 au lieu de -2
     }
-
-    @Test
-    void goldenMaster15Jours() {
-        Item[] items = new Item[] {
-                new Item(ItemType.PRODUIT_NORMAL, 10, 20), // produit normal
-                new Item(ItemType.PRODUIT_NORMAL, 0, 7), // produit normal périmé
-                new Item(ItemType.PRODUIT_NORMAL, 5, 5), // produit normal proche de 0
-                new Item(ItemType.COMTE, 2, 0), // comté
-                new Item(ItemType.COMTE, 0, 49), // comté périmé et proche de 50
-                new Item(ItemType.KRYPTONITE, 0, 80), // kryptonite
-                new Item(ItemType.PASS_VIP, 15, 20), // Pass VIP
-                new Item(ItemType.PASS_VIP, 10, 30), // Pass VIP palier 10 jours
-                new Item(ItemType.PASS_VIP, 5, 35), // Pass VIP palier 5 jours
-                new Item(ItemType.PASS_VIP, 0, 40), // Pass VIP concert passé
-                new Item(ItemType.POUVOIR_MAGIQUE, 10, 20), // Pouvoir magique
-                new Item(ItemType.POUVOIR_MAGIQUE, 0, 10) // Pouvoir magique périmé
-        };
-
-        Magasin magasin = new Magasin(items);
-
-        for (int jour = 0; jour < 15; jour++) {
-            System.out.println("Jour " +  jour + " :");
-            for (Item item : items) {
-                System.out.println(item);
-            }
-            System.out.println();
-
-            magasin.updateQuality();
-        }
-    }
 }
