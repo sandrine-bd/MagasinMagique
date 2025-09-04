@@ -50,6 +50,15 @@ class MagasinTest {
     }
 
     @Test
+    void comtePerime_gagne2Quality() {
+        Magasin magasin = new Magasin(new Item[]{ new Item("Comté", 0, 40) });
+        magasin.updateQuality();
+        Item produit = magasin.items[0];
+        assertEquals(-1, produit.sellIn);
+        assertEquals(42, produit.quality); // +2 car périmé
+    }
+
+    @Test
     void quality_jamaisPlusQue50() {
         Magasin magasin = new Magasin(new Item[] { new Item("Comté", 5, 50)});
         magasin.updateQuality();

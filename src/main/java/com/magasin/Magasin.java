@@ -8,6 +8,75 @@ class Magasin {
     }
 
     public void updateQuality() {
+        for (Item item : items) {
+            switch (item.name) {
+                case ItemType.COMTE:
+                    updateComte(item);
+                    break;
+                case ItemType.KRYPTONITE:
+                    // ne change pas
+                    break;
+                case ItemType.PASS_VIP:
+                    updatePassVIP(item);
+                    break;
+                case ItemType.POUVOIR_MAGIQUE:
+                    updatePouvoirMagique(item);
+                    break;
+                default:
+                    updateProduitNormal(item);
+                    break;
+            }
+        }
+    }
+
+    private void updateProduitNormal(Item item) {
+        degrade(item, 1);
+        item.sellIn--;
+        if(item.sellIn < 0) {
+            degrade(item, 1);
+        }
+    }
+
+    private void updateComte(Item item) {
+        improve(item, 1);
+        item.sellIn--;
+        if(item.sellIn < 0) {
+            improve(item, 1);
+        }
+    }
+
+    private void updatePassVIP(Item item) {
+        improve(item, 1);
+        if(item.sellIn <= 10) {
+            improve(item, 1);
+        }
+        if(item.sellIn <= 5) {
+            improve(item, 1);
+        }
+        item.sellIn--;
+        if(item.sellIn < 0) {
+            item.quality = 0;
+        }
+    }
+
+    private void updatePouvoirMagique(Item item) {
+        degrade(item, 2);
+        item.sellIn--;
+        if(item.sellIn < 0) {
+            degrade(item, 2);
+        }
+    }
+
+    private void degrade(Item item, int amount) {
+        item.quality = Math.max(0, item.quality - amount); // Math.max choisit la plus grande valeur entre les 2 chiffres
+    }
+
+    private void improve(Item item, int amount) {
+        item.quality = Math.max(50, item.quality + amount);
+    }
+}
+
+        /*
         for (int i = 0; i < items.length; i++) {
             if (!items[i].name.equals("Comté")
                     && !items[i].name.equals("Pass VIP Concert")) {
@@ -74,3 +143,4 @@ class Magasin {
         }
     }
 }
+*/
