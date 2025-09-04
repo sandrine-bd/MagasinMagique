@@ -15,7 +15,7 @@ class MagasinTest {
 
     @Test
     void produitNormal_perd1QualityEt1Sellin() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Produit normal", 10, 20) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.PRODUIT_NORMAL, 10, 20) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(9, produit.sellIn); // -1
@@ -24,7 +24,7 @@ class MagasinTest {
 
     @Test
     void produitNormalPerime_perd2Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Produit normal", 0, 10) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.PRODUIT_NORMAL, 0, 10) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(-1, produit.sellIn);
@@ -33,7 +33,7 @@ class MagasinTest {
 
     @Test
     void quality_jamaisNegative() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Produit normal", 5, 0) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.PRODUIT_NORMAL, 5, 0) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(4, produit.sellIn);
@@ -42,7 +42,7 @@ class MagasinTest {
 
     @Test
     void comte_gagne1Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Comté", 10, 40) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.COMTE, 10, 40) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(9, produit.sellIn);
@@ -51,7 +51,7 @@ class MagasinTest {
 
     @Test
     void comtePerime_gagne2Quality() {
-        Magasin magasin = new Magasin(new Item[]{ new Item("Comté", 0, 40) });
+        Magasin magasin = new Magasin(new Item[]{ new Item(ItemType.COMTE, 0, 40) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(-1, produit.sellIn);
@@ -60,7 +60,7 @@ class MagasinTest {
 
     @Test
     void quality_jamaisPlusQue50() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Comté", 5, 50)});
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.COMTE, 5, 50)});
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(4, produit.sellIn);
@@ -69,7 +69,7 @@ class MagasinTest {
 
     @Test
     void kryptonite_neChangeJamais() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Kryptonite", 5, 80) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.KRYPTONITE, 5, 80) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(5, produit.sellIn); // pas de date de péremption
@@ -78,7 +78,7 @@ class MagasinTest {
 
     @Test
     void passVIP_gagne1Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Pass VIP Concert", 15, 20) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.PASS_VIP, 15, 20) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(14, produit.sellIn);
@@ -87,7 +87,7 @@ class MagasinTest {
 
     @Test
     void passVIP_10JoursOuMoins_gagne2Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Pass VIP Concert", 10, 20) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.PASS_VIP, 10, 20) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(9, produit.sellIn);
@@ -96,7 +96,7 @@ class MagasinTest {
 
     @Test
     void passVIP_5JoursOuMoins_gagne3Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Pass VIP Concert", 5, 20) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.PASS_VIP, 5, 20) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(4, produit.sellIn);
@@ -105,7 +105,7 @@ class MagasinTest {
 
     @Test
     void passVIP_apresConcert_qualityZero() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Pass VIP Concert", 0, 20) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.PASS_VIP, 0, 20) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(-1, produit.sellIn);
@@ -114,7 +114,7 @@ class MagasinTest {
 
     @Test
     void pouvoirMagique_perd2Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Pouvoir magique", 10, 20) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.POUVOIR_MAGIQUE, 10, 20) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(9, produit.sellIn);
@@ -123,7 +123,7 @@ class MagasinTest {
 
     @Test
     void pouvoirMagiquePerime_perd4Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Pouvoir magique", 0, 10) });
+        Magasin magasin = new Magasin(new Item[] { new Item(ItemType.POUVOIR_MAGIQUE, 0, 10) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(-1, produit.sellIn);

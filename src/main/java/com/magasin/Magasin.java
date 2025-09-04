@@ -68,11 +68,17 @@ class Magasin {
     }
 
     private void degrade(Item item, int amount) {
-        item.quality = Math.max(0, item.quality - amount); // Math.max choisit la plus grande valeur entre les 2 chiffres
+        item.quality = item.quality - amount;
+        if (item.quality < 0) {
+            item.quality = 0;
+        }
     }
 
     private void improve(Item item, int amount) {
-        item.quality = Math.max(50, item.quality + amount);
+        item.quality = item.quality + amount;
+        if (item.quality > 50) {
+            item.quality = 50;
+        }
     }
 }
 
