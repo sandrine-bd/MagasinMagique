@@ -133,12 +133,18 @@ class MagasinTest {
     @Test
     void goldenMaster15Jours() {
         Item[] items = new Item[] {
-                new Item("Produit normal", 10, 20),
-                new Item("Comté", 2, 0),
-                new Item("Kryptonite", 0, 80),
-                new Item("Pass VIP Concert", 15, 20),
-                new Item("Produit normal", 0, 7),
-                new Item("Produit normal", 5, 45)
+                new Item(ItemType.PRODUIT_NORMAL, 10, 20), // produit normal
+                new Item(ItemType.PRODUIT_NORMAL, 0, 7), // produit normal périmé
+                new Item(ItemType.PRODUIT_NORMAL, 5, 5), // produit normal proche de 0
+                new Item(ItemType.COMTE, 2, 0), // comté
+                new Item(ItemType.COMTE, 0, 49), // comté périmé et proche de 50
+                new Item(ItemType.KRYPTONITE, 0, 80), // kryptonite
+                new Item(ItemType.PASS_VIP, 15, 20), // Pass VIP
+                new Item(ItemType.PASS_VIP, 10, 30), // Pass VIP palier 10 jours
+                new Item(ItemType.PASS_VIP, 5, 35), // Pass VIP palier 5 jours
+                new Item(ItemType.PASS_VIP, 0, 40), // Pass VIP concert passé
+                new Item(ItemType.POUVOIR_MAGIQUE, 10, 20), // Pouvoir magique
+                new Item(ItemType.POUVOIR_MAGIQUE, 0, 10) // Pouvoir magique périmé
         };
 
         Magasin magasin = new Magasin(items);
