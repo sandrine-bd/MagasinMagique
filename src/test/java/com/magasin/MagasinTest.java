@@ -104,6 +104,23 @@ class MagasinTest {
     }
 
     @Test
+    void pouvoirMagique_perd2Quality() {
+        Magasin magasin = new Magasin(new Item[] { new Item("Pouvoir Magique", 10, 20) });
+        magasin.updateQuality();
+        Item produit = magasin.items[0];
+        assertEquals(9, produit.sellIn);
+        assertEquals(18, produit.quality); // -2 au lieu de -1
+    }
+
+    void pouvoirMagiquePerime_perd4Quality() {
+        Magasin magasin = new Magasin(new Item[] { new Item("Pouvoir Magique", 0, 10) });
+        magasin.updateQuality();
+        Item produit = magasin.items[0];
+        assertEquals(-1, produit.sellIn);
+        assertEquals(6, produit.quality); // -4 au lieu de -2
+    }
+
+    @Test
     void goldenMaster15Jours() {
         Item[] items = new Item[] {
                 new Item("Produit normal", 10, 20),
