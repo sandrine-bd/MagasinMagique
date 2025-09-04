@@ -51,7 +51,7 @@ class MagasinTest {
 
     @Test
     void quality_jamaisPlusQue50() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Produit normal", 5, 50)});
+        Magasin magasin = new Magasin(new Item[] { new Item("Comté", 5, 50)});
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(4, produit.sellIn);
@@ -111,7 +111,7 @@ class MagasinTest {
                 new Item("Kryptonite", 0, 80),
                 new Item("Pass VIP Concert", 15, 20),
                 new Item("Produit normal", 0, 7),
-                new Item("Produit normal", 5, 55)
+                new Item("Produit normal", 5, 45)
         };
 
         Magasin magasin = new Magasin(items);
