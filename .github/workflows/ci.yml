@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI with JUnit Reports
 
 on:
   push:
@@ -24,16 +24,15 @@ jobs:
 
       # 3. Construire le projet avec Maven
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn -B clean install
 
       # 4. Exécuter les tests
       - name: Run tests
-        run: mvn test
+        run: mvn -B test
 
-      # 5. Publier les résultats JUnit
-      - name: Publish Test Results
+      # 5. Publier les résultats de test dans l'interface Github
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v4
         if: always()
-        uses: actions/upload-artifact@v3
         with:
-          name: test-results
-          path: target/surefire-reports
+          report_paths: '**/target/surefire-reports/TEST-*.xml'
