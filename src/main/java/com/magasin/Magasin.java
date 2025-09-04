@@ -13,7 +13,11 @@ class Magasin {
                     && !items[i].name.equals("Pass VIP Concert")) {
                 if (items[i].quality > 0) {
                     if (!items[i].name.equals("Kryptonite")) {
-                        items[i].quality = items[i].quality - 1;
+                        if (items[i].name.equals("Pouvoir magique")) {
+                            items[i].quality = items[i].quality - 2;
+                        } else {
+                            items[i].quality = items[i].quality - 1;
+                        }
                     }
                 }
             } else {
@@ -45,7 +49,11 @@ class Magasin {
                     if (!items[i].name.equals("Pass VIP Concert")) {
                         if (items[i].quality > 0) {
                             if (!items[i].name.equals("Kryptonite")) {
-                                items[i].quality = items[i].quality - 1;
+                                if (items[i].name.equals("Pouvoir magique")) {
+                                    items[i].quality = items[i].quality - 2;
+                                } else {
+                                    items[i].quality = items[i].quality - 1;
+                                }
                             }
                         }
                     } else {
@@ -56,6 +64,12 @@ class Magasin {
                         items[i].quality = items[i].quality + 1;
                     }
                 }
+            }
+            if (items[i].quality < 0) {
+                items[i].quality = 0; // sécurité
+            }
+            if (items[i].quality > 50 && !items[i].name.equals("Kryptonite")) {
+                items[i].quality = 50;
             }
         }
     }

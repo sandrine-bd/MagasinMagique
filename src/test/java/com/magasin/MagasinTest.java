@@ -105,15 +105,16 @@ class MagasinTest {
 
     @Test
     void pouvoirMagique_perd2Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Pouvoir Magique", 10, 20) });
+        Magasin magasin = new Magasin(new Item[] { new Item("Pouvoir magique", 10, 20) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(9, produit.sellIn);
         assertEquals(18, produit.quality); // -2 au lieu de -1
     }
 
+    @Test
     void pouvoirMagiquePerime_perd4Quality() {
-        Magasin magasin = new Magasin(new Item[] { new Item("Pouvoir Magique", 0, 10) });
+        Magasin magasin = new Magasin(new Item[] { new Item("Pouvoir magique", 0, 10) });
         magasin.updateQuality();
         Item produit = magasin.items[0];
         assertEquals(-1, produit.sellIn);
